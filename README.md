@@ -1,2 +1,2 @@
-# stylized-orb
-stylized orb vfx using threejs and some shaders
+# stylized-tornado
+stylized tornado vfx using threejs and some shaders
