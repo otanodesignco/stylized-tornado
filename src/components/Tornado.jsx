@@ -17,7 +17,7 @@ export default function Model(props) {
             twirlCenter={ new Vector2( 0.5, -0.52 ) }
             twirlOffset={ new Vector2( -1.0, -0.5 ) }
             radialOffset={ new Vector2( -1.0, 0.5 ) }
-            alphaThreshold={ 0.22}
+            alphaThreshold={ 0.17}
         />
     </mesh>
     </group>
