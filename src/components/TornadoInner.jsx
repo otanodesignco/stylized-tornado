@@ -11,9 +11,10 @@ export default function Model(props) {
         geometry={nodes.tornado.geometry}
       >
         <MeshTornadoMaterial
-            colorIntensity={ 7 }
+        colorBase='#a80860'
+            colorIntensity={ 6 }
             radialShearAmount={ new Vector2( 0.7, 0.7 )}
-            alphaThreshold={ 0.14 }
+            alphaThreshold={ 0.13 }
         />
     </mesh>
     </group>
