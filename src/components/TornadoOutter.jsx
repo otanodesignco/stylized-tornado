@@ -11,7 +11,7 @@ export default function Model(props) {
         geometry={nodes.tornado.geometry}
       >
         <MeshTornadoMaterial
-            colorBase='#4f3b4d'
+            colorBase='#3a3a3a'
             colorIntensity={ 2 }
             twirlAmount={ 6 }
             radialShearAmount={ new Vector2( 0.9, 0.9 ) }
@@ -19,6 +19,7 @@ export default function Model(props) {
             twirlOffset={ new Vector2( -0.5, -0.25 ) }
             radialOffset={ new Vector2( -0.5, 0.5 ) }
             alphaThreshold={ 0.18}
+            showEdge={ false }
         />
     </mesh>
     </group>

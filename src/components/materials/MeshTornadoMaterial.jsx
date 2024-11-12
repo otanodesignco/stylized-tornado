@@ -16,9 +16,15 @@ export default function MeshTornadoMaterial({
     radialCenter = new Vector2( 0.5, 0.5 ), // center of radial shear
     noisePower = 1, // power value for noise
     alphaThreshold = 0.17, // controls alpha clip
+    showEdge = false, // show cuttoff edge
 }, props) 
 {
     const self = useRef()
+
+    if( typeof showEdge !== 'boolean')
+    {
+        showEdge = false
+    }
 
     const uniforms =
     {
@@ -32,6 +38,7 @@ export default function MeshTornadoMaterial({
         uRadialCenter: radialCenter,
         uNoisePower: noisePower,
         uAlphaThreshold: alphaThreshold,
+        uEdge: showEdge,
     }
 
     useFrame( ( state, delta ) =>

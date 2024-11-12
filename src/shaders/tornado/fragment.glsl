@@ -8,6 +8,7 @@ uniform vec2 uTwirlCenter;
 uniform vec2 uRadialCenter;
 uniform float uNoisePower;
 uniform float uAlphaThreshold;
+uniform bool uEdge;
 
 in vec2 vUv;
 
@@ -26,6 +27,10 @@ void main()
     vec2 twirlOffset = vec2( time * uTwirlOffset.x, time * uTwirlOffset.y );
     vec2 radialOffset = vec2( time * uRadialOffset.x, time * uRadialOffset.y );
 
+    float uvCutOff = uv.y;
+    uvCutOff = smoothstep( 0.2, 1.0, uvCutOff + 0.2 );
+
+
     vec2 uvRadial = radialShear( uv, uRadialCenter, uRadialShear, radialOffset );
     vec2 uvTwirl = twirl( uv, uTwirlCenter, uTwirl, twirlOffset );
 
@@ -43,7 +48,14 @@ void main()
 
     clip( noise, uAlphaThreshold, 0 );
 
-    gl_FragColor = vec4( colorFinal, dissolve );
+    vec4 color = vec4( colorFinal, dissolve );
+
+    if( uEdge )
+    {
+        color.a *= uvCutOff;
+    }
+
+    gl_FragColor = color;
     #include <tonemapping_fragment>
     #include <colorspace_fragment>
 

@@ -14,7 +14,8 @@ export default function Model(props) {
         colorBase='#ff5400'
             colorIntensity={ 8 }
             radialShearAmount={ new Vector2( 0.7, 0.7 )}
-            alphaThreshold={ 0.13 }
+            alphaThreshold={ 0.17 }
+            showEdge={ true }
         />
     </mesh>
     </group>
