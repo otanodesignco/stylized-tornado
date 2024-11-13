@@ -35,7 +35,6 @@ body,
 {
     color: rgba(255, 255, 255, 0.7);
     font-family: sans-serif;
-    font-size: 5rem;
     text-transform: uppercase;
     font-weight: 800;
 }
@@ -45,9 +44,10 @@ body,
     overflow: hidden;
 }
 
-.overlay-title .overlay-char
+.overlay-char
 {
     display: inline-block;
+    font-size: 4rem;
     opacity: 0;
     transform: translateY(20px);
 }

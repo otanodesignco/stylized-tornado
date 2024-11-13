@@ -29,7 +29,7 @@ void main()
     // create a cutoff threshold using pow to increase dark
     float noiseCutOff = pow( noiseVoronoi.r, uPowerOffset );
 
-    noiseCutOff = step( uNoiseCutOff, noiseCutOff );
+    //noiseCutOff = step( uNoiseCutOff, noiseCutOff );
 
     // assign colors with noise
     vec3 colorFront = uFrontColor;
