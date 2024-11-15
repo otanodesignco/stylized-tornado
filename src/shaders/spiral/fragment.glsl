@@ -15,12 +15,12 @@ void main()
 {
     vec2 uv = vUv;
 
-    vec2 timeOffset = vec2( uTime * 0.6, 0.0 );
+    vec2 timeOffset = vec2( uTime * 0.8, 0.0 );
 
-    //vec2 uvTiled =  mod( ( uv * 1.0 ) + timeOffset, 1.0 );
+    vec2 uvTiled =  tileOffset( uv, vec2( 1.0 ), timeOffset, false );
 
     // noise from texture sampled at r channel
-    vec3 noiseVoronoi = texture( uNoise, uv ).rgb;
+    vec3 noiseVoronoi = texture( uNoise, uvTiled ).rgb;
 
     float uvCutOff = uv.y;
 

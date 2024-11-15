@@ -18,7 +18,7 @@ export default function HighlightMiddle(props)
         const time = state.clock.elapsedTime * 3.4
         const scale = 0.2 * Math.sin( time ) + 0.8
 
-        self.current.rotation.y += delta * 6
+        // self.current.rotation.y += delta * 6
         self.current.scale.set( scale, scale, scale )
     })
 
