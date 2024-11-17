@@ -11,7 +11,7 @@ export default function Model(props) {
         geometry={nodes.tornado.geometry}
       >
         <MeshTornadoMaterial
-            colorBase='#3a3a3a'
+            colorBase='#022028'
             colorIntensity={ 2 }
             twirlAmount={ 6 }
             radialShearAmount={ new Vector2( 0.9, 0.9 ) }

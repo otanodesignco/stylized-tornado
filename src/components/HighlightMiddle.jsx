@@ -29,8 +29,8 @@ export default function HighlightMiddle(props)
             geometry={nodes.Cylinder.geometry}
         >
             <MeshSpiralMaterial
-                frontColor='#111111'
-                backColor='#ff810c'
+                frontColor='#022028'
+                backColor='#3DF5FF'
                 intensity={ 2.7 }
                 powerOffset={ 12 }
                 colorBoth={ true }

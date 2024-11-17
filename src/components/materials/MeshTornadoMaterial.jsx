@@ -6,7 +6,7 @@ import { extend, useFrame } from '@react-three/fiber'
 import { DoubleSide, Vector2, Color } from 'three'
 
 export default function MeshTornadoMaterial({
-    colorBase = '#ff821c', // base color
+    colorBase = '#3DF5FF', // base color
     colorIntensity = 12, // color intensity for bloom
     twirlAmount = 8, // amount to twirl by
     radialShearAmount = new Vector2( 5.0, 5.0 ), // amount to radial shear by
